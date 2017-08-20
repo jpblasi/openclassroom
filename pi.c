@@ -3,6 +3,7 @@
 #define PREC 		10000
 #define TABLE_LEN	8400
 #define TEST        5
+#define STR_START   "PI=3."
 
 long i, j;
 
@@ -10,6 +11,7 @@ long resultat;
 long retenue;
 long table[TABLE_LEN + 1];
 long tmp;
+char start = 1;
 
 int main(int argc, char *argv[])
 {
@@ -24,7 +26,13 @@ int main(int argc, char *argv[])
     		resultat = tmp / ((2 * i) - 1);
     		table[i] = tmp % ((2 * i) - 1);
     	}
-    	printf("%.4ld", retenue + (resultat / PREC));
+        if (!start) {
+    	    printf("%.4ld", retenue + (resultat / PREC));
+        }
+        else {
+            printf(STR_START);
+            start = 0;
+        }
     	retenue = resultat % PREC;
     }
 
