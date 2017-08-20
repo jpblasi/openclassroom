@@ -2,7 +2,7 @@
 
 #define PREC 		10000
 #define TABLE_LEN	8400
-#define TEST        8
+#define TEST        5
 #define STR_START   "PI=3."
 
 long i, j;
