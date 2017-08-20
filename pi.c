@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     	    printf("%.4ld", retenue + (resultat / PREC));
         }
         else {
-            printf(STR_START);
+            printf((char *)STR_START);
             start = 0;
         }
     	retenue = resultat % PREC;
